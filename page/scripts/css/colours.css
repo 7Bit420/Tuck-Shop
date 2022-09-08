@@ -1,0 +1,85 @@
+* {
+    --blue-1: #b3e3ff;
+    --blue-2: #80d0ff;
+    --blue-3: #33b4ff;
+    --blue-4: #00b3b3;
+    --blue-5: #0072B5;
+    --blue-6: #004166;
+    --blue-7: #34568B;
+
+    --green-1: #8cff1a;
+    --green-2: #4dff4d;
+    --green-3: #00e600;
+    --green-4: #00b300;
+    --green-5: #00b300;
+    --green-6: #00994d;
+
+    --yellow-1: #ffff4d;
+    --yellow-2: #ffff1a;
+    --yellow-3: #e6e600;
+
+    --red-1: #ff8080;
+    --red-2: #ff1a1a;
+    --red-3: #b30000;
+
+    /* DARK DEFAULT COLOUR SCHEME */
+
+    --palete-dark-primary: #06283D;
+    --palete-dark-secondary: #1363DF;
+    --palete-dark-tertiary: #47B5FF;
+    --palete-dark-quaternary: #DFF6FF;
+    
+    /* LIGHT DEFAULT COLOUR SCHEME */
+
+    --palete-light-primary: #7098DA;
+    --palete-light-secondary: #6EB6FF;
+    --palete-light-tertiary: #90F2FF;
+    --palete-light-quaternary: #E0FCFF;
+
+    /* OTHER COLOUR SCHEMES */
+
+    --palete-1-primary: #1C658C;
+    --palete-1-secondary: #398AB9;
+    --palete-1-tertiary: #D8D2CB;
+    --palete-1-quaternary: #EEEEEE;
+
+    --palete-2-primary: rgb(230, 230, 230);
+    --palete-2-secondary: rgb(92, 122, 234);
+    --palete-2-tertiary: rgb(61, 86, 178);
+    --palete-2-quaternary: rgb(20, 39, 155);
+
+    --palete-3-primary: rgb(177, 208, 224);
+    --palete-3-secondary: rgb(105, 152, 171);
+    --palete-3-tertiary: rgb(64, 104, 130);
+    --palete-3-quaternary: rgb(26, 55, 77);
+
+    --palete-4-primary: rgb(238, 238, 238);
+    --palete-4-secondary: rgb(216, 210, 203);
+    --palete-4-tertiary: rgb(57, 138, 185);
+    --palete-4-quaternary: rgb(28, 101, 140);
+
+    --palete-5-primary: rgb(223, 246, 255);
+    --palete-5-secondary: rgb(71, 181, 255);
+    --palete-5-tertiary: rgb(19, 99, 223);
+    --palete-5-quaternary: rgb(6, 40, 61);
+
+    --palete-6-primary: rgb(115, 169, 173);
+    --palete-6-secondary: rgb(144, 200, 172);
+    --palete-6-tertiary: rgb(196, 223, 170);
+    --palete-6-quaternary: rgb(245, 240, 187);
+
+    --palete-7-primary: rgb(116, 141, 166);
+    --palete-7-secondary: rgb(156, 180, 204);
+    --palete-7-tertiary: rgb(211, 206, 223);
+    --palete-7-quaternary: rgb(242, 215, 217);
+
+    --palete-8-primary: rgb(114, 255, 255);
+    --palete-8-secondary: rgb(0, 215, 255);
+    --palete-8-tertiary: rgb(0, 150, 255);
+    --palete-8-quaternary: rgb(88, 0, 255);
+
+    --palete-9-primary: rgb(249, 245, 235);
+    --palete-9-secondary: rgb(234, 227, 210);
+    --palete-9-tertiary: rgb(96, 126, 170);
+    --palete-9-quaternary: rgb(28, 56, 121);
+}

@@ -1,0 +1,55 @@
+@import url("base.css");
+
+nav {
+    scroll-snap-align: start;
+    width: 100vw;
+    height: 10vh;
+    background: var(--background-1);
+}
+
+nav>h1 {
+    float: left;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 0px 1vw;
+    font-size: 30px;
+    height: 100%;
+    background: var(--background-1);
+}
+
+nav>h1:hover {
+    background: var(--background-4);
+}
+
+section.hero {
+    scroll-snap-align: unset;
+    width: 100vw;
+    height: 90vh;
+    background: var(--background-4);
+}
+
+section.main {
+    width: 100vw;
+    height: 100vh;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-snap-align: start;
+}
+
+#login,
+#order {
+    float: right;
+}
+
+img.hero {
+    width: 100vw;
+    height: 90vh;
+    object-fit: cover;
+}

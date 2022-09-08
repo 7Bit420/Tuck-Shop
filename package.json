@@ -1,0 +1,25 @@
+{
+  "name": "scotch-tuck-shop",
+  "version": "1.0.0",
+  "description": "Scotch Tuck Shop Server Code",
+  "main": "startup.js",
+  "scripts": {
+    "install": "",
+    "build": "cd util; rm -R -f ./dist; cp -R ./src/. ./dist; find ./dist -name \"*.ts\" -delete; tsc;",
+    "start": "node util/dist/startup.js",
+    "pkg": ""
+  },
+  "author": "Michael Bell",
+  "license": "MIT",
+  "dependencies": {
+    "@types/uuid": "^8.3.4",
+    "@types/ws": "^8.5.3",
+    "fs": "^0.0.1-security",
+    "uuid": "^8.3.2",
+    "ws": "^8.8.1",
+    "yaml": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.13"
+  }
+}

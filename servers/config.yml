@@ -1,0 +1,20 @@
+servers:
+  - name: web
+    dirname: web
+    type: node
+    runfile: dist/index.js
+    detached: false
+    capabilities:
+      smart-cluster: true
+    #args:
+    #env:
+    #flags
+  - name: database
+    dirname: database
+    type: node
+    runfile: dist/index.js
+    detached: false
+    capabilities:
+      smart-cluster: true
+    env:
+      DBPWD: "/Users/michael/Desktop/code/Progects/Tuck-Shop/databases"

@@ -1,0 +1,11 @@
+dbHandlers:
+  - name: json-db
+    file: json-db.js
+    type: js
+databases :
+  - name: users
+    type: json-db
+    path: /Users/michael/Desktop/code/Progects/Tuck-Shop/databases/users
+  - name: logs
+    type: json-db
+    path: /Users/michael/Desktop/code/Progects/Tuck-Shop/databases/datalogs

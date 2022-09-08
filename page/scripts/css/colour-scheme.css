@@ -1,0 +1,46 @@
+@import url("colours.css");
+
+@media screen and (prefers-color-scheme: dark) {
+
+    * {
+        --primary: var(--palete-dark-primary);
+        --secondry: var(--palete-dark-secondary);
+        --tritrary: var(--palete-dark-tertiary);
+
+        --background-1: var(--palete-dark-primary);
+        --background-2: var(--palete-dark-secondary);
+        --background-3: var(--palete-dark-tertiary);
+        --background-4: var(--palete-1-primary);
+
+        --text-1: var(--palete-dark-quaternary);
+        --text-2: var(--palete-1-quaternary);
+        --text-3: var(--palete-3-tertiary);
+        --text-4: var(--palete-1-secondary);
+    }
+}
+
+@media screen and (prefers-color-scheme: light) {
+    * {
+        --primary: var(--palete-light-primary);
+        --secondry: var(--palete-light-secondary);
+        --tritrary: var(--palete-light-tertiary);
+
+        --background-1: var(--palete-light-primary);
+        --background-2: var(--palete-light-secondary);
+        --background-3: var(--palete-light-tertiary);
+        --background-4: var(--palete-1-primary);
+
+        --text-1: var(--palete-dark-primary);
+        --text-2: var(--palete-7-primary);
+        --text-3: var(--palete-7-secondary);
+        --text-4: var(--blue-1);
+    }
+}
+
+/*
+
+COLOUR PALLETS:
+
+https://colorhunt.co/palette/1c658c398ab9d8d2cbeeeeee
+
+*/

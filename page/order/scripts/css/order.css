@@ -1,0 +1,43 @@
+@import url("/scripts/css/base.css");
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+}
+
+nav {
+    scroll-snap-align: start;
+    width: 100vw;
+    height: 10vh;
+    background: green;
+}
+
+section.hero {
+    width: 100vw;
+    height: 40vh;
+    background: black;
+}
+
+main>section {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    float: left;
+    flex-shrink: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+main {
+    scroll-snap-align: start;
+    width: 100vw;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: scroll;
+    height: min-content;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}

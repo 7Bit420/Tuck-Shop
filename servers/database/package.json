@@ -1,0 +1,14 @@
+{
+    "name": "scotch-tuck-shop-database",
+    "version": "1.0.0",
+    "description": "Scotch Tuck Shop Database Server Code",
+    "main": "dist/index.js",
+    "scripts": {
+        "install": "",
+        "build": "rm -R -f ./dist; cp -R ./src/. ./dist; find ./dist -name \"*.ts\" -delete; tsc;",
+        "start": "node dist/index.js",
+        "pkg": ""
+    },
+    "author": "Michael Bell",
+    "license": "MIT"
+}

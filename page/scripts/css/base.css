@@ -1,0 +1,11 @@
+@import url("colour-scheme.css");
+@import url("colours.css");
+@import url("fonts.css");
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    box-sizing: unset;
+    font-family: var(--font-primary);
+}
