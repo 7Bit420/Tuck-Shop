@@ -2,10 +2,25 @@ dbHandlers:
   - name: json-db
     file: json-db.js
     type: js
+  - name: json-queue
+    file: json-queue.js
+    type: js
+  - name: map
+    file: map.js
+    type: js
 databases :
   - name: users
     type: json-db
     path: /Users/michael/Desktop/code/Progects/Tuck-Shop/databases/users
+    args: [ 
+      [ username, password, id]
+    ]
   - name: logs
     type: json-db
     path: /Users/michael/Desktop/code/Progects/Tuck-Shop/databases/datalogs
+  - name: orders
+    type: json-queue
+    path: /Users/michael/Desktop/code/Progects/Tuck-Shop/databases/orders
+  - name: sessions
+    type: map
+    path: /tmp

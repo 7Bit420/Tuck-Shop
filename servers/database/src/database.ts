@@ -1,5 +1,6 @@
 import { PWD, DBPWD } from './index'
 import * as yaml from 'yaml'
+import * as path from 'path'
 import * as fs from 'fs'
 
 const config = yaml.parse(fs.readFileSync(`${DBPWD}/config/dbconfig.yml`).toString('ascii'))
@@ -25,7 +26,7 @@ for (let i = 0; i < config.databases.length; i++) {
     databases.set(db.name, db)
     switch (handlerInfo.get(db.type).type) {
         case 'js':
-            dbHandlers.set(db.name, new (handlers.get(db.type))( ...db.args ))
+            dbHandlers.set(db.name, new (handlers.get(db.type))( path.resolve(DBPWD, db.path), ...(db?.args ?? []) ))
             break;
     }
 }

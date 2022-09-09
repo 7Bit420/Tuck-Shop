@@ -1,8 +1,10 @@
 import { readdirRecersive } from './util/readdirRecersive'
+import { client as wsClient } from './client'
 import * as http from 'http'
 import * as fs from 'fs'
 
 const PWD = __dirname
+const client = new wsClient('webserver', 5000)
 
 const handlers = readdirRecersive(PWD + '/handlers').filter((t: string) => t.endsWith('.js'))
 
@@ -71,4 +73,4 @@ httpServer.on('request', (req, res) => {
 
 httpServer.listen(80)
 
-export { PWD, config }
+export { PWD, config, client }

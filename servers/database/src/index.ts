@@ -16,7 +16,7 @@ wsClient.on('message', (head, body, res) => {
         if (typeof handler[String(head.method)] != 'function') return res({ type: 'error' }, { code: 405 })
 
         try {
-            handler[String(head.method)](res, ...body)
+            res({ type: 'response' }, handler[String(head.method)](...body))
             return
         } catch (err) {
             res({ type: 'error' }, { code: 500, err })

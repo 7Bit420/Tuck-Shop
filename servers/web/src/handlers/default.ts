@@ -4,12 +4,6 @@ import * as fs from 'fs'
 
 const mmie = JSON.parse(fs.readFileSync(CONFIG['content-type-file']).toString())
 
-const path = '/'
-const type = 'special'
-const config = {
-    type: 'rootHttp'
-}
-
 function handler(
     req: http.IncomingMessage,
     res: http.ServerResponse
@@ -53,6 +47,12 @@ function handler(
     }
 
     res.end()
+}
+
+const path = '/'
+const type = 'special'
+const config = {
+    type: 'rootHttp'
 }
 
 export { path, type, config, handler }

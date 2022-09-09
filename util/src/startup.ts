@@ -1,5 +1,5 @@
 import * as tm from './thread-mamanger'
-import { renderConsole } from './console';
+import * as consoleV2 from './console'
 import * as cp from 'child_process'
 import * as cluster from 'cluster'
 import * as yaml from 'yaml'
@@ -28,6 +28,7 @@ threadManager.on('message', (head, body, respond) => {
 const serverConfig: {
     servers: server[]
 } = yaml.parse(fs.readFileSync(process.env.PWD + '/servers/config.yml').toString('ascii'));
+const servers = []
 
 serverConfig.servers.forEach(server => {
 
@@ -35,15 +36,18 @@ serverConfig.servers.forEach(server => {
         case 'node':
             var args = server.flags?.map(t => '--' + t) ?? []
             args.push(...(server?.args ?? []))
-            cp.fork(`${PWD}/servers/${server.dirname}/${server.runfile}`, {
+            servers.push(cp.fork(`${PWD}/servers/${server.dirname}/${server.runfile}`, {
                 env: server.env,
                 execArgv: args,
-                detached: server.detached
-            })
+                detached: server.detached,
+                
+            }))
             break;
         default:
             break;
     }
 })
 
-export { serverConfig }
+consoleV2.initConsole()
+
+export { serverConfig, threadManager, servers }
