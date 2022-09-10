@@ -13,13 +13,22 @@ async function handler(
     req: http.IncomingMessage,
     res: http.ServerResponse
 ) {
+    if (
+        !req.headers.username ||
+        !req.headers.password
+    ) {
+        res.writeHead(400, { 'Content-Type': 'application/json' })
+        res.write(`{ "code": 400, "message": "No username or password", "ecode": "INVARG" }`)
+        return res.end()
+    }
+
     const uid = (await client.send({
-        db: 'user',
-        methid: 'findEntry'
+        db: 'users',
+        method: 'findEntry'
     }, [
         {
-            username: req.headers.username,
-            password: req.headers.password
+            username: req.headers.username ?? '',
+            password: req.headers.password ?? ''
         }
     ], 'database', true)).body.id
 
@@ -34,12 +43,15 @@ async function handler(
         'Set-Cookie': `sessionid=${sessionID}`,
         'Content-Type': 'application/json'
     })
-    res.write(JSON.stringify((await client.send({
-        db: 'user',
-        methid: 'getEntry'
+
+    var user = (await client.send({
+        db: 'users',
+        method: 'getEntry'
     }, [
         uid, true
-    ], 'database', true)).body))
+    ], 'database', true))
+
+    res.write(JSON.stringify(user.body))
     res.end()
 }
 

@@ -2,3 +2,6 @@ node_modules
 dist
 .vscode
 notes.md
+datalogs
+orders
+users

@@ -21,7 +21,7 @@ const PWD: string = process.env.PWD
 const threadManager = new tm.threadManager(5000)
 
 threadManager.on('message', (head, body, respond) => {
-    console.log(body)
+    // console.log(body)
     respond({}, { msg: 'world' })
 })
 
@@ -39,8 +39,7 @@ serverConfig.servers.forEach(server => {
             servers.push(cp.fork(`${PWD}/servers/${server.dirname}/${server.runfile}`, {
                 env: server.env,
                 execArgv: args,
-                detached: server.detached,
-                
+                detached: server.detached
             }))
             break;
         default:

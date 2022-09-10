@@ -7,7 +7,9 @@
     "install": "",
     "build": "cd util; rm -R -f ./dist; cp -R ./src/. ./dist; find ./dist -name \"*.ts\" -delete; tsc;",
     "start": "node util/dist/startup.js",
-    "pkg": ""
+    "pkg": "",
+    "build-web": "cd servers/web; npm run build",
+    "build-database": "cd servers/database; npm run build"
   },
   "author": "Michael Bell",
   "license": "MIT",

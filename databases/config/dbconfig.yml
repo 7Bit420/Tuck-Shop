@@ -13,7 +13,7 @@ databases :
     type: json-db
     path: /Users/michael/Desktop/code/Progects/Tuck-Shop/databases/users
     args: [ 
-      [ username, password, id]
+      [ username, password ]
     ]
   - name: logs
     type: json-db

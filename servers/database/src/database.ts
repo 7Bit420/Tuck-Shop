@@ -7,7 +7,7 @@ const config = yaml.parse(fs.readFileSync(`${DBPWD}/config/dbconfig.yml`).toStri
 const handlerInfo = new Map()
 const handlers = new Map()
 const databases = new Map()
-const dbHandlers: Map<string, database> = new Map()
+const dbHandlers: Map<string, any & database> = new Map()
 
 for (let i = 0; i < config.dbHandlers.length; i++) {
     const handler = config.dbHandlers[i];

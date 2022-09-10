@@ -14,7 +14,7 @@ function initConsole() {
                     method: 'makeEntry'
                 }, [
                     { time: Date.now() }
-                ], 'database', true).then((data) => console.log(data.body))
+                ], 'database', true)//.then((data) => console.log(data.body))
                 break;
             case 'push':
                 wsClient.send({
@@ -22,7 +22,7 @@ function initConsole() {
                     method: 'addItem'
                 }, [
                     { time: Date.now() }
-                ], 'database', true).then((data) => console.log(data.body))
+                ], 'database', true)//.then((data) => console.log(data.body))
                 break;
             case 'shift':
                 wsClient.send({
@@ -30,7 +30,7 @@ function initConsole() {
                     method: 'removeItem'
                 }, [
                     args[1]
-                ], 'database', true).then((data) => console.log(data.body))
+                ], 'database', true)//.then((data) => console.log(data.body))
                 break;
         }
     })

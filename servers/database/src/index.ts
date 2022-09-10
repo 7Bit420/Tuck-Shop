@@ -19,7 +19,8 @@ wsClient.on('message', (head, body, res) => {
             res({ type: 'response' }, handler[String(head.method)](...body))
             return
         } catch (err) {
-            res({ type: 'error' }, { code: 500, err })
+            res({ type: 'error' }, { code: 500, err: err })
+            console.log(err)
         }
     } else {
         res({ type: 'error' }, { code: 404 })

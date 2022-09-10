@@ -63,8 +63,8 @@ class database {
         }
     }
     findEntry(query) {
-        this.#lookUpinfo.find(t => {
-            for (const p of query) {
+        return this.#lookUpinfo.find(t => {
+            for (const p in query) {
                 if (t[p] != query[p]) {
                     return false;
                 }
@@ -119,6 +119,13 @@ class database {
             id = raw ? key : this.#manifest.get(key);
         }
         fs.writeFileSync(`${this.#path}/entrys/${id}`, JSON.stringify(value));
+        return true;
+    }
+    editEntry(key, value, raw) {
+        var id = raw ? key : this.#manifest.get(key);
+        var writeData = JSON.parse(fs.readFileSync(`${this.#path}/entrys/${id}`).toString('ascii'));
+        Object.assign(writeData, value);
+        fs.writeFileSync(`${this.#path}/entrys/${id}`, JSON.stringify(writeData));
         return true;
     }
     removeEntry(key) {
